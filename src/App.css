@@ -19,10 +19,12 @@ body {
   display: flex;
   flex-direction: column;
   margin-bottom: 8px;
+  color: white;
 }
 
 /* Styling für den DELETE-Button */
-.delete-button {
+.delete-button,
+.edit-button {
   background-color: #ccc;
   color: #000;
   text-transform: uppercase;
@@ -58,6 +60,28 @@ body {
   margin-right: 8px;
 }
 
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.edit-form input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.edit-form button {
+  background-color: #ccc;
+  color: #000;
+  text-transform: uppercase;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
 /* Wiederverwendbares Styling für die Bestätigungsfrage */
 .color-card-highlight {
   font-size: 16px;
@@ -84,5 +108,24 @@ body {
 .button-container {
   display: flex;
   align-items: center;
+  margin-top: 8px;
+}
+
+/* Styles for ColorForm and edit-form */
+.input-field {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  width: 100%;
+}
+.submit-button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
   margin-top: 8px;
 }

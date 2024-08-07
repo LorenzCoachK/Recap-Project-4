@@ -35,7 +35,7 @@ export default function ColorForm({
       </label>
       <br />
       <label htmlFor="hex">
-        Hex
+        Background Hex-Code
         <br />
         <ColorInput
           id="hex"
@@ -45,7 +45,7 @@ export default function ColorForm({
       </label>
       <br />
       <label htmlFor="contrastText">
-        Contrast Text
+        Contrast Text Hex-Code
         <br />
         <ColorInput
           id="contrastText"

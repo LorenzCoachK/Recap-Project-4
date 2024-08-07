@@ -2,3 +2,87 @@ body {
   font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   padding: 10px;
 }
+
+/* Stlying für die Farbkarte */
+.color-card {
+  padding: 16px;
+  border: 1px solid #ddd;
+  margin-bottom: 16px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: inherit;
+}
+
+/* Styling für die Farb-Info */
+.color-info {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+
+/* Styling für den DELETE-Button */
+.delete-button {
+  background-color: #ccc;
+  color: #000;
+  text-transform: uppercase;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+/* Styling für den Bestätigungsdialog */
+.confirmation-dialog {
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 4px;
+  max-width: fit-content;
+}
+
+/* Styling für die Bestätigungs- und Abbrechen-Buttons */
+.confirmation-button,
+.cancel-button {
+  background-color: #ccc;
+  color: #000;
+  text-transform: uppercase;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+/* Wiederverwendbares Styling für die Bestätigungsfrage */
+.color-card-highlight {
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+/* Styling für den Hinweis bei leeren Farbkarten */
+.no-colors {
+  color: #000;
+  margin-top: 16 px;
+}
+
+/* Container für die Farbkarte und die Buttons */
+.color.container {
+  padding: 16px;
+  border: 1px solid #ddd;
+  margin-bottom: 16px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}

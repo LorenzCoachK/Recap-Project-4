@@ -1,6 +1,6 @@
 //  08. August: Task No. 5: Store Themes in users´ local storage
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { initialColors } from "./lib/colors";
 import Color from "./Components/Color/Color";
@@ -8,8 +8,16 @@ import ColorForm from "./Components/Color/ColorForm/ColorForm";
 import "./App.css";
 
 function App() {
-  const [colors, setColors] = useState(initialColors);
-  const [deletingColorId, setDeletingColorId] = useState(null); // Track, which color is being confirmed for deletion
+  // initialisieren von colors entweder mit local storage oder standards aus der lib
+  const [colors, setColors] = useState(() => {
+    const storedColors = localStorage.getItem("colors");
+    return storedColors ? JSON.parse(storedColors) : initialColors;
+  });
+
+  // Speichern von Farben bei jeder Änderung im local storage
+  useEffect(() => {
+    localStorage.setItem("colors", JSON.stringify(colors));
+  }, [colors]);
 
   function handleAddColor(newColor) {
     // console.log("New Color submittet:", newColor);

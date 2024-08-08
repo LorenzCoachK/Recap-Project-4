@@ -1,4 +1,4 @@
-// Import der neu erstellten Dateien
+//  08. August: Task No. 5: Store Themes in users´ local storage
 
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
@@ -57,48 +57,3 @@ function App() {
 }
 
 export default App;
-
-// dieser Code stand oberhalb des return und hat leider nicht die Buttons in die color-card gebaut, sondern darunter. Zudem hat der Button nicht deleted.
-// return (
-//   <>
-//     <h1>Theme Creator</h1>
-//     <ColorForm onSubmitColor={handleAddColor} />
-//     {colors.length === 0 && (
-//       <p className="no-colors">No colors anymore ... start by adding one!</p>
-//     )}
-//     {colors.map((color) => (
-//       <div
-//         key={color.id}
-//         className="color-card"
-//         style={{ background: color.hex }}>
-//         <div className="color-info">
-//           <Color color={color} />
-//           <div className="button-container">
-//             {deletingColorId === color.id ? (
-//               <>
-//                 <p className="color-card-highlight">
-//                   Really delete this color theme?
-//                 </p>
-//                 <button
-//                   className="confirmation-button"
-//                   onClick={confirmDeleteColor}>
-//                   DELETE
-//                 </button>
-//                 <button className="cancel-button" onClick={cancelDeleteColor}>
-//                   CANCEL
-//                 </button>
-//               </>
-//             ) : (
-//               <button
-//                 className="delete-button"
-//                 onClick={() => handleDeleteColor(color.id)}>
-//                 DELETE
-//               </button>
-//             )}
-//           </div>
-//         </div>
-//       </div>
-//     ))}
-//   </>
-// );
-// }

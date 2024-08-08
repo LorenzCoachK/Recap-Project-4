@@ -1,5 +1,5 @@
 // Von Lorenz erstellter Code unter zu Hilfenahme der Hints aus dem Handout und KI (ChatGPT)
-// Task N0. 2: User can add ColorForm
+// Task N0. 5: User can add Themes in Local Storage
 
 import ColorInput from "../../ColorInput/ColorInput";
 import { useState } from "react";

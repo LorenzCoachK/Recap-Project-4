@@ -11,6 +11,7 @@ export default function Color({ color, onDelete, onUdpdateColor }) {
   const [updatedContrastText, setUpdatedContrastText] = useState(
     color.contrastText
   );
+  const [copySuccess, setCopySuccess] = useState(false);
 
   const handleDeleteClick = () => {
     setShowConfirmation(true);
@@ -35,6 +36,13 @@ export default function Color({ color, onDelete, onUdpdateColor }) {
 
   const handleCancelEditClick = () => {
     setIsEditing(false);
+  };
+
+  const handCopyClick = () => {
+    navigator.clipboard.writeText(color.hex).then(() => {
+      setCopySuccess(true);
+      setTimeout(() => setCopySuccess(false), 3000);
+    });
   };
 
   return (
@@ -93,7 +101,13 @@ export default function Color({ color, onDelete, onUdpdateColor }) {
         </form>
       ) : (
         <>
-          <h3 className="color-card-headline">{color.hex}</h3>
+          <div className="color-card-headline-container">
+            <h3 className="color-card-headline">{color.hex}</h3>
+            {/* Einfügen des COPY Buttons mit eigenem Verständis */}
+            <button className="copy-button" onClick={handCopyClick}>
+              {copySuccess ? "CODE SUCCESSFULLY COPIED!" : "COPY"}
+            </button>
+          </div>
           <h4>{color.role}</h4>
           <p>contrast: {color.contrastText}</p>
           <div className="button-container">

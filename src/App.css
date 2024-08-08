@@ -22,9 +22,11 @@ body {
   color: white;
 }
 
-/* Styling für den DELETE-Button */
+/* Styling für den DELETE, EDIT, COPY-Button, SUCCESS message */
 .delete-button,
-.edit-button {
+.edit-button,
+.copy-button,
+.copy-button-success {
   background-color: #ccc;
   color: #000;
   text-transform: uppercase;
@@ -33,6 +35,8 @@ body {
   padding: 8px 12px;
   cursor: pointer;
   margin-top: 8px;
+  margin-left: 4px;
+  margin-right: 2px;
 }
 
 /* Styling für den Bestätigungsdialog */
